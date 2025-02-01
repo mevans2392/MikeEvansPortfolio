@@ -8,62 +8,62 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container" style="justify-content: center;">
-            <div class="row" id="title">
+        <!-- intro section -->
+        <div class="container">
+            <div class="row" id="title" style="justify-content: center;">
                 <h1>Projects:</h1>
             </div>
             <hr>
-            <div class="row" id="intro">
+            <div class="row" id="intro" style="margin: 5%;">
                 <p>Welcome to my projects page!<br>
                 Below are projects that I have created for my Bachelor Degree in Software Engineering.<br>
                 Click the picture to navigate to the website.</p>
             </div>
+        </div>
             <hr>
             <!-- portfolio project - takes you to the site landing page. -->
-            <div class="row" id="portproject">
-                <div class="col-md-8" id="portinfo">
+            <div class="row" id="portproject" style="margin: 5%;">
+                <div class="col-sm-8" id="portinfo">
                     <h3>Portfolio Website:</h3>
-                    <p>Clicking this picture will take you back to the home page.<br>
+                    <p>Clicking this picture will take you back to the home page.
                     I designed and wrote the code for my portfolio website.<br>
                     Source code is available at <a href="github.com/mevans2392/MikeEvansPortfolio">github.com/mevans2392/MikeEvansPortfolio</a></p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <a href="index.html"><img src="images/portfolio.png" id="portpic"></a>
                 </div>
             </div>
             
             <!-- project for Front-End Web Development D277 -->
-            <div class="row" id="nysproject">
-                <div class="col-md-4">
-                    <a href="https://mevans2392.github.io/NYSInfo/" target="_blank"><img src="images/nyssite.png" id="nyspic"></a>
-                </div>
-                <div class="col-md-8" id="nysinfo">
+            <div class="row" id="nysproject" style="margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">
+                <div class="col-sm-8" id="nysinfo">
                     <h3>D277: Front-End Web Development:</h3>
-                    <p>The objective in this class was to create a website that gives demographic<br>
-                    information about cities in the state that I live in. I chose to 4 cities and<br>
-                    reseached the demographic information. I found the top 5 attractions of each state<br>
+                    <p>The objective in this class was to create a website that gives demographic
+                    information about cities in the state that I live in. I chose to 4 cities and
+                    reseached the demographic information. I found the top 5 attractions of each state
                     and gave the cost to attend each attraction.<br>
                     Source code is available at <a href="https://github.com/mevans2392/NYSInfo">github.com/mevans2392/NYSInfo</a></p>
                 </div>
+                <div class="col-sm-4" id="nyslink">
+                    <a href="https://mevans2392.github.io/NYSInfo/" target="_blank"><img src="images/nyssite.png" id="nyspic"></a>
+                </div>
             </div>
             <!-- project for JavaScript Programming D280-->
-            <div class="row" id="jsproject">
-                <div class="col-md-8" id="jsinfo">
+            <div class="row" id="jsproject" style="margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">
+                <div class="col-sm-8" id="jsinfo">
                     <h3>D280: JavaScript Programming</h3>
-                    <p>The objective of this project was to create a map using Angular that gives<br>
-                    information about the country when a country is clicked on the SVG map. The SVG<br>
-                    code has event binding on it to pull from the World Bank API. Each country has a<br>
-                    :hover pseudo class on it as well.<br>
+                    <p>The objective of this project was to create a map using Angular that gives
+                    information about the country when a country is clicked on the SVG map. The SVG
+                    code has event binding on it to pull from the World Bank API. Each country has a :hover pseudo class on it as well.<br>
                     Source code is available at <a href="https://github.com/mevans2392/angular_map" target="_blank">github.com/mevans2392/angular_map</a></p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <a href="https://mevans2392.github.io/angular_map/" target="_blank"><img src="images/jspic.png" id="jspic" alt="picture for website"></a>
                 </div>
             </div>
             <div class="row" id="foot">
 
             </div>
-        </div>
 
         <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
