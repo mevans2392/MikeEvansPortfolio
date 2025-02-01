@@ -1,14 +1,3 @@
-@media all and (min-width: 400px) {
-    #nysinfo {
-        position: absolute;
-        left: 250px;
-    }
-    #nyslink {
-        position: absolute;
-        float: left;
-    }
-}
-
 img {
     width: 100%;
 }
@@ -34,7 +23,7 @@ img:hover {
 @keyframes nysinfo {
     0% {left: 1600px;}
     50% {left: 1600px;}
-    100% {left: 250px;}
+    100% {left: 0px;}
 }
 @keyframes jspic {
     0% {left: 800px;}
@@ -59,7 +48,7 @@ img:hover {
     animation-name: portpic;
     animation-duration: 1000ms;
 }
-#nyspic {
+#nyslink {
     position: relative;
     animation-name: nyspic;
     animation-duration: 2000ms;
