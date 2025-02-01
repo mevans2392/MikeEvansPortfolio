@@ -22,7 +22,11 @@
                 else {
                     parentNode.insertBefore(element, element2);
                 }
-            }
+            };
+
+            window.addEventListener('resize', function() {
+                location.reload();
+            });
         </script>
     </head>
     <body onload="swapDivs()">
