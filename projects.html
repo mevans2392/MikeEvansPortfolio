@@ -24,8 +24,13 @@
                 }
             };
 
+            let previousWidth = window.innerWidth;
+
             window.addEventListener('resize', function() {
-                location.reload();
+                let currentWidth = window.innerWidth;
+                if(currentWidth !== previousWidth) {
+                    location.reload();
+                }    
             });
         </script>
     </head>
