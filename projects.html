@@ -11,16 +11,22 @@
             function swapDivs() {
                 console.log(window.outerWidth);
                 const x = window.outerWidth;
-                const element = document.getElementById("nyslink");
-                const element2 = document.getElementById("nysinfo");
-                const parentNode = element.parentNode;
+                const nysLink = document.getElementById("nyslink");
+                const nysInfo = document.getElementById("nysinfo");
+                const vacationTrackerLink = document.getElementById("vacationTrackerLink");
+                const vacationTrackerInfo = document.getElementById("vacationTrackerInfo");
+                 
+                const nysParentNode = nysLink.parentNode;
+                const vacParentNode = vacationTrackerLink.parentNode;
 
                 if (x < 600) {
                     console.log("changing element ids");
-                    parentNode.insertBefore(element2, element);
+                    nysParentNode.insertBefore(nysInfo, nysLink);
+                    vacParentNode.insertBefore(vacationTrackerInfo, vacationTrackerLink);
                 }
                 else {
-                    parentNode.insertBefore(element, element2);
+                    nysParentNode.insertBefore(nysLink, nysInfo);
+                    vacParentNode.insertBefore(vacationTrackerLink, vacationTrackerInfo);
                 }
             };
 
@@ -87,6 +93,21 @@
                 </div>
                 <div class="col-sm-4">
                     <a href="https://mevans2392.github.io/angular_map/" target="_blank"><img src="images/jspic.png" id="jspic" alt="picture for website"></a>
+                </div>
+            </div>
+            <!-- Android development projects -->
+            <div class="row" id="nysproject" style="margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">
+                
+                <div class="col-sm-4" id="vacationTrackerLink" style="text-align:center;">
+                    <a href="https://mevans2392.github.io/vacation_tracking_app/" target="_blank"><img src="images/vacation_tracker.jpg" id="vacationTrackerPic"></a>
+                </div>
+                <div class="col-sm-8" id="vacationTrackerInfo">
+                    <h3>D424: Capstone:</h3>
+                    <p>I created a personal vacation tracker app for Android devices. The app allows the user
+                        to add, edit and share details about vacations that they have planned. The app uses 
+                        the Room Framework to store information locally on user's devices. The image link takes
+                        you to a webpage where you can download the .apk file for the app.<br>
+                    Source code is available at <a href="https://github.com/mevans2392/vacation_tracking_app">github.com/mevans2392/vacation_tracking_app</a></p>
                 </div>
             </div>
             <div class="row" id="foot" style="position: relative">

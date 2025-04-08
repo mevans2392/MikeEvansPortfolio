@@ -7,6 +7,17 @@ img:hover {
     transition-duration: 1000ms;
 }
 
+#vacationTrackerPic {
+    width: 50%;
+}
+
+#vacationTrackerPic:hover {
+    width: 55%;
+    box-shadow: -5px -5px 5px gray;
+    transition-duration: 1000ms;
+
+}
+
 @keyframes portpic {
     from {left: 800px;}
     to {left: 0px;}
@@ -34,6 +45,16 @@ img:hover {
     0% {left: -1600px;}
     50% {left: -1600px;}
     100% {left: 0%;}
+}
+@keyframes vacationTrackerPic {
+    0% {left: -800px;}
+    50% {left: -800px;}
+    100% {left: 0px;}
+}
+@keyframes vacationTrackerInfo {
+    0% {left: 1600px;}
+    50% {left: 1600px;}
+    100% {left: 0px;}
 }
 
 
@@ -67,6 +88,16 @@ img:hover {
     position: relative;
     animation-name: jsinfo;
     animation-duration: 3000ms;
+}
+#vacationTrackerLink {
+    position: relative;
+    animation-name: vacationTrackerPic;
+    animation-duration: 4000ms;
+}
+#vacationTrackerInfo {
+    position: relative;
+    animation-name: vacationTrackerInfo;
+    animation-duration: 4000ms;
 }
 
 #resume {
