@@ -2,102 +2,124 @@ img {
     width: 100%;
 }
 img:hover {
-    width: 105%;
+    transform: scale(1.05);
     box-shadow: -5px -5px 5px gray;
-    transition-duration: 1000ms;
+    transition: transform 1s, box-shadow 1s;
 }
 
 #vacationTrackerPic {
     width: 50%;
+    height: auto;
 }
 
 #vacationTrackerPic:hover {
-    width: 55%;
+    transform: scale(1.1);
     box-shadow: -5px -5px 5px gray;
-    transition-duration: 1000ms;
+    transition: transform 1s, box-shadow 1s;
 
 }
 
 @keyframes portpic {
-    from {left: 800px;}
-    to {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes portinfo {
-    from {left: -1600px;}
-    to {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes nyspic {
-    0% {left: -800px;}
-    50% {left: -800px;}
-    100% {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes nysinfo {
-    0% {left: 1600px;}
-    50% {left: 1600px;}
-    100% {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes jspic {
-    0% {left: 800px;}
-    50% {left: 800px;}
-    100% {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes jsinfo {
-    0% {left: -1600px;}
-    50% {left: -1600px;}
-    100% {left: 0%;}
+    to {transform: translateX(0%); opacity: 1;}
 }
 @keyframes vacationTrackerPic {
-    0% {left: -800px;}
-    50% {left: -800px;}
-    100% {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 @keyframes vacationTrackerInfo {
-    0% {left: 1600px;}
-    50% {left: 1600px;}
-    100% {left: 0px;}
+    to {transform: translateX(0px); opacity: 1;}
 }
 
+#nysProject {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 #portinfo {
     position: relative;
-    animation-name: portinfo;
-    animation-duration: 1000ms;
+    transform: translateX(-100vw);
+    opacity: 0;
+    animation: portinfo 1s forwards;
 }
 #portpic {
     position: relative;
-    animation-name: portpic;
-    animation-duration: 1000ms;
+    transform: translateX(100vw);
+    opacity: 0;
+    animation: portpic 1s forwards;
 }
 #nyslink {
     position: relative;
-    animation-name: nyspic;
-    animation-duration: 2000ms;
+    transform: translateX(-100vw);
+    opacity: 0;
+    order: 1;
+    animation: nyspic 1s 1s forwards;
 }
 #nysinfo {
     position: relative;
-    animation-name: nysinfo;
-    animation-duration: 2000ms;
+    transform: translate(100vw);
+    opacity: 0;
+    order: 2;
+    animation: nysinfo 1s 1s forwards;
 }
 #jspic {
     position: relative;
-    animation-name: jspic;
-    animation-duration: 3000ms;
+    transform: translate(100vw);
+    opacity: 0;
+    animation: jspic 1s 2s forwards;
 }
 #jsinfo {
     position: relative;
-    animation-name: jsinfo;
-    animation-duration: 3000ms;
+    transform: translate(-100vw);
+    opacity: 0;
+    animation: jsinfo 1s 2s forwards;
 }
 #vacationTrackerLink {
     position: relative;
-    animation-name: vacationTrackerPic;
-    animation-duration: 4000ms;
+    transform: translate(-100vw);
+    opacity: 0;
+    order: 1;
+    animation: vacationTrackerPic 1s 3s forwards;
 }
 #vacationTrackerInfo {
     position: relative;
-    animation-name: vacationTrackerInfo;
-    animation-duration: 4000ms;
+    transform: translate(100vw);
+    opacity: 0;
+    order: 2;
+    animation: vacationTrackerInfo 1s 3s forwards;
+}
+
+@media (max-width: 600px) {
+    #nysProject {
+        flex-direction: column;
+    }
+    #nyslink {
+        order: 2;
+    }
+    #nysinfo {
+        order: 1;
+    }
+    #vacationTrackerLink {
+        order: 2;
+    }
+    #vacationTrackerInfo {
+        order: 1;
+    }
 }
 
 #resume {

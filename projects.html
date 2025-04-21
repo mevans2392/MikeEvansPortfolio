@@ -7,38 +7,37 @@
         <link rel="stylesheet" href="projects.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- put nys picture below text on mobile devices -->
-        <script>
-            function swapDivs() {
-                console.log(window.outerWidth);
-                const x = window.outerWidth;
-                const nysLink = document.getElementById("nyslink");
-                const nysInfo = document.getElementById("nysinfo");
-                const vacationTrackerLink = document.getElementById("vacationTrackerLink");
-                const vacationTrackerInfo = document.getElementById("vacationTrackerInfo");
-                 
-                const nysParentNode = nysLink.parentNode;
-                const vacParentNode = vacationTrackerLink.parentNode;
-
-                if (x < 600) {
-                    console.log("changing element ids");
-                    nysParentNode.insertBefore(nysInfo, nysLink);
-                    vacParentNode.insertBefore(vacationTrackerInfo, vacationTrackerLink);
-                }
-                else {
-                    nysParentNode.insertBefore(nysLink, nysInfo);
-                    vacParentNode.insertBefore(vacationTrackerLink, vacationTrackerInfo);
-                }
-            };
-
-            let previousWidth = window.innerWidth;
-
-            window.addEventListener('resize', function() {
-                let currentWidth = window.innerWidth;
-                if(currentWidth !== previousWidth) {
-                    location.reload();
-                }    
+        <!-- <script>
+            function swapDivsForScreenWidth() {
+              const width = window.innerWidth;
+              
+              const nysLink = document.getElementById("nyslink");
+              const nysInfo = document.getElementById("nysinfo");
+              const vacationTrackerLink = document.getElementById("vacationTrackerLink");
+              const vacationTrackerInfo = document.getElementById("vacationTrackerInfo");
+          
+              const nysParentNode = nysLink?.parentNode;
+              const vacParentNode = vacationTrackerLink?.parentNode;
+          
+              if (width < 600) {
+                nysParentNode?.insertBefore(nysInfo, nysLink);
+                vacParentNode?.insertBefore(vacationTrackerInfo, vacationTrackerLink);
+              } else {
+                nysParentNode?.insertBefore(nysLink, nysInfo);
+                vacParentNode?.insertBefore(vacationTrackerLink, vacationTrackerInfo);
+              }
+            }
+          
+            // Run on DOM ready
+            document.addEventListener('DOMContentLoaded', swapDivsForScreenWidth);
+          
+            // Also run on resize (optional, or delete if not needed)
+            window.addEventListener('resize', () => {
+              swapDivsForScreenWidth();
             });
-        </script>
+          </script> -->
+          
+
     </head>
     <body onload="swapDivs()">
         <!-- intro section -->
@@ -113,7 +112,8 @@
             <div class="row" id="foot" style="position: relative">
 
             </div>
-
+        
+        
         <script src="script.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
