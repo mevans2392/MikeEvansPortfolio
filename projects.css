@@ -77,34 +77,31 @@ img:hover {
     order: 2;
     animation: nysinfo 1s 1s forwards;
 }
-#jspic {
-    position: relative;
-    transform: translate(100vw);
-    opacity: 0;
-    animation: jspic 1s 2s forwards;
-}
-#jsinfo {
-    position: relative;
-    transform: translate(-100vw);
-    opacity: 0;
-    animation: jsinfo 1s 2s forwards;
-}
 #vacationTrackerLink {
     position: relative;
     transform: translate(-100vw);
     opacity: 0;
-    order: 1;
     animation: vacationTrackerPic 1s 3s forwards;
 }
 #vacationTrackerInfo {
     position: relative;
     transform: translate(100vw);
     opacity: 0;
-    order: 2;
     animation: vacationTrackerInfo 1s 3s forwards;
 }
 
 @media (max-width: 600px) {
+    .container {
+        text-align: center;
+        white-space: normal;
+        overflow: visible;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
     #nysProject {
         flex-direction: column;
     }
@@ -114,12 +111,12 @@ img:hover {
     #nysinfo {
         order: 1;
     }
-    #vacationTrackerLink {
+    /* #vacationTrackerLink {
         order: 2;
     }
     #vacationTrackerInfo {
         order: 1;
-    }
+    } */
 }
 
 #resume {
