@@ -43,6 +43,12 @@ img:hover {
 @keyframes vacationTrackerInfo {
     to {transform: translateX(0px); opacity: 1;}
 }
+@keyframes calendarPic {
+    to {transform: translateX(0px); opacity: 1;}
+}
+@keyframes calendarInfo {
+    to {transform: translateX(0px); opacity: 1;}
+}
 
 #nysProject {
     display: flex;
@@ -79,15 +85,30 @@ img:hover {
 }
 #vacationTrackerLink {
     position: relative;
-    transform: translate(-100vw);
+    transform: translate(100vw);
     opacity: 0;
-    animation: vacationTrackerPic 1s 3s forwards;
+    animation: vacationTrackerPic 1s 2s forwards;
 }
 #vacationTrackerInfo {
     position: relative;
+    transform: translate(-100vw);
+    opacity: 0;
+    animation: vacationTrackerInfo 1s 2s forwards;
+}
+#calendarPic {
+    order: 1;
+    position: relative;
+    transform: translate(-100vw);
+    opacity: 0;
+    animation: calendarPic 1s 3s forwards;
+}
+#calendarInfo {
+    order: 2;
+    position: relative;
     transform: translate(100vw);
     opacity: 0;
-    animation: vacationTrackerInfo 1s 3s forwards;
+    animation: calendarInfo 1s 3s forwards;
+
 }
 
 @media (max-width: 600px) {
@@ -111,12 +132,12 @@ img:hover {
     #nysinfo {
         order: 1;
     }
-    /* #vacationTrackerLink {
+    #calendarPic {
         order: 2;
     }
-    #vacationTrackerInfo {
+    #calendarInfo {
         order: 1;
-    } */
+    }
 }
 
 #resume {
